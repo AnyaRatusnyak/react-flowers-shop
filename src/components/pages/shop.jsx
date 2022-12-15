@@ -1,7 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export const Shop = () => {
+import { FlowerInfo } from "../flower-info/flower-info";
+
+export const Shop = ({flower}) => {
   return (
-    <div>Shop</div>
-  )
-}
+    <section
+      id="shop"
+      className="shop"
+    >
+      <div className="shop__category">This is SHOP</div>
+
+      <FlowerInfo flower={flower} />
+    </section>
+  );
+};

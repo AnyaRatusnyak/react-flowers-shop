@@ -15,7 +15,6 @@
   }
 
   &__logo {
-    padding: 31px 0;
 
     span {
       color: $c-primary;
@@ -30,36 +29,33 @@
 
 .menu-header {
   min-width: 300px;
-  margin-right: 30px;
 
   &__list {
     @include flex(space-between, center);
     list-style: none;
     padding-left: 0;
+    margin: 0;
+  }
 
-    &__item {
+  &__item {
+    padding: 30px 0;
+    border-bottom: 4px solid transparent;
 
-      &.active {
-        a {
-          color: $c-primary;
-        }
-      }
+    &:hover {
+      border-bottom: 4px solid $c-primary;
+    }
+
+    &.active {
+      color: $c-primary;
     }
   }
 }
 
 .profile {
-  &__notification {
-    position: relative;
-    margin-right: 25px;
-    color: #fff;
-    font-size: 34px;
-    cursor: pointer;
-  }
-
   &__cart {
     
     cursor: pointer;
+
     margin-right: 20px;
     img{
       width: 25px;
@@ -68,6 +64,7 @@
   }
 
   &__avatar {
+    margin-right: 20px;
     cursor: pointer;
 
     img {

@@ -35,6 +35,16 @@ export const router = createBrowserRouter([
         // loader: loaderAbout,
       },
       {
+        path: PATHS.cart,
+        element: <>Cart</>,
+        // loader: loaderAbout,
+      },
+      {
+        path: PATHS.profile,
+        element: <>Profile</>,
+        // loader: loaderAbout,
+      },
+      {
         path: "*",
         element: <NotFoundPage />,
       },

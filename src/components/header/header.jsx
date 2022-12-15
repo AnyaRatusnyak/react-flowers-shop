@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import { incr } from "../../Redux/incrReducer";
 import { PATHS } from "../../utils/urls";
 import profileLogo from '../../assets/img/profileLogo.svg'
@@ -16,7 +17,7 @@ export const Header = () => {
     <header className="header">
       <div className="container">
         <div className="header__logo">
-          <span>Flower</span> Shop
+          <Link to={PATHS.home}><span>Flower</span>Shop</Link>
         </div>
         <nav className="header__menu menu-header">
           <ul className="menu-header__list">
@@ -48,6 +49,7 @@ export const Header = () => {
               Sign UP
             </button>
           </Link> */}
+
           <Link to={PATHS.login}>
             <div className="profile__cart">
               <img src={profileLogo} alt="cart" />
