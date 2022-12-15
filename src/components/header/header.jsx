@@ -1,13 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import user from "../../assets/svg/user.svg";
-import cartShop from "../../assets/svg/cart-shopping.svg";
+import { incr } from "../../Redux/incrReducer";
 import { PATHS } from "../../utils/urls";
-
-import "./header.scss";
+import profileLogo from '../../assets/img/profileLogo.svg'
+import corsina from '../../assets/img/corsina.svg'
+import './header.scss';
+import { useDispatch,useSelector } from "react-redux";
 
 export const Header = () => {
+  const count= useSelector(state=>state.increment.count)
+  const arr= useSelector(state=>state.editPhotoCart.data)
+  const dispatch=useDispatch()
+  console.log(document.location.pathname)
   return (
     <header className="header">
       <div className="container">
@@ -16,9 +21,10 @@ export const Header = () => {
         </div>
         <nav className="header__menu menu-header">
           <ul className="menu-header__list">
-            <li className="menu-header__item">
-              <Link to={PATHS.home}>Home</Link>
+            <li className="menu-header__item" onClick={()=>dispatch(incr())}>
+              <Link to={PATHS.home}>Home{count}</Link>
             </li>
+            {arr.map(()=><>ggg</>)}
 
             <li className="menu-header__item">
               <Link to={PATHS.shop}>Shop</Link>
@@ -44,22 +50,18 @@ export const Header = () => {
             </button>
           </Link> */}
 
-          <div className="profile__avatar">
-            <Link to={PATHS.profile}>
-              <img
-                src={user}
-                alt="avatar"
-              />
-            </Link>
-          </div>
+          <Link to={PATHS.login}>
+            <div className="profile__cart">
+              <img src={profileLogo} alt="cart" />
+           </div>
+          </Link>
+          
 
-          <div className="profile__cart">
-            <Link to={PATHS.cart}>
-              <img
-                src={cartShop}
-                alt="cart"
-              />
-            </Link>
+          <div className="profile__avatar">
+            <img
+              src={corsina}
+              alt="cart"
+            />
           </div>
         </div>
 

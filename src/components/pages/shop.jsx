@@ -1,8 +1,8 @@
 import React from "react";
 
-import { SelectedFlower } from "../selected-flower/selected-flower";
+import { FlowerInfo } from "../flower-info/flower-info";
 
-export const Shop = () => {
+export const Shop = ({flower}) => {
   return (
     <section
       id="shop"
@@ -10,7 +10,7 @@ export const Shop = () => {
     >
       <div className="shop__category">This is SHOP</div>
 
-      <SelectedFlower />
+      <FlowerInfo flower={flower} />
     </section>
   );
 };

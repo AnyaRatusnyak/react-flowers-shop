@@ -5,5 +5,6 @@ import { Loader } from './components/ui/loader/loader';
 
 export const App = () => (
   <RouterProvider router={router} fallbackElement={<Loader />}></RouterProvider>
+  
   //ааа
 );

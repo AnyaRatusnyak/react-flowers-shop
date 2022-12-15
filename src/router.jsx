@@ -7,11 +7,12 @@ import { Layout } from "./components/layout";
 import { ErrorPage } from "./components/pages/error-page";
 import { NotFoundPage } from "./components/pages/not-found-page";
 import { Shop } from "./components/pages/shop";
+import AuthReg from '../src/components/AuthReg/AuthReg'
 
 export const router = createBrowserRouter([
   {
     path: PATHS.home,
-    element: <Layout />,
+    element: <Layout/>,
     errorElement: <ErrorPage />,
     children: [
       {
@@ -47,6 +48,26 @@ export const router = createBrowserRouter([
         path: "*",
         element: <NotFoundPage />,
       },
+      {
+        path:PATHS.login,
+        element:<AuthReg initial='log'/>
+      },
+      {
+        path:PATHS.register,
+        element:<AuthReg initial='reg' />
+      }
     ],
+  },
+]);
+
+
+
+
+export const routerq = createBrowserRouter([
+  {
+    path: PATHS.profile,
+    element: <AuthReg type='log'/>,
+    errorElement: <ErrorPage />,
+    
   },
 ]);

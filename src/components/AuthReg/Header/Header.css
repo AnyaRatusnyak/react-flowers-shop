@@ -1,0 +1,44 @@
+
+.BackToHome{
+    position: absolute;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 13px;
+    margin-left: 308px;
+    cursor: pointer;
+}
+
+
+.h1{
+    width: 79px;
+    margin: 0 361px 0 48px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 38px;
+text-align: left;
+}
+
+.h2{
+    margin: 13px 240px 0 50px;
+    width: 100%;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 21px;
+color: #838383;
+text-align: left;
+}
+
+
+.txtB{
+    height: 21px;
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+margin-left: 4px;
+line-height: 19px;
+}
