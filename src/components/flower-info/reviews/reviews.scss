@@ -7,7 +7,7 @@
   }
 
   &__review {
-    @include flex(flex-start, center);
+    @include flex(flex-start, flex-start);
     margin-bottom: 35px;
   }
 

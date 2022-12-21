@@ -1,23 +1,13 @@
+@import "./normalize";
+@import "./reset";
 @import "./variable";
+
 * {
   box-sizing: border-box;
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, $ff-roboto;
-  // "Segoe UI", "Roboto", "Oxygen",
-  //   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  //   sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --bs-link-hover-color: $c-primary;
 }
 
 code {
@@ -32,10 +22,12 @@ html {
 body {
   min-height: 100%;
   background: $c-background;
-  font-family: $ff-roboto;
+  font-family: -apple-system, $ff-roboto;
   color: $c-text;
   font-size: $fs-text;
   line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .wrapper {
@@ -74,10 +66,23 @@ svg {
 }
 
 .title-h2 {
-  font-weight: 700;
+  @include flex(center, center);
+  font-weight: 500;
   font-size: $fs-h2;
   line-height: 1.4;
   color: $c-black;
+  margin-bottom: 35px;
+
+  &::before,
+  &::after {
+    content: "";
+    margin-right: 20px;
+    width: 165px;
+    border-bottom: 1px solid $c-line;
+  }
+  &::after {
+    margin-left: 20px;
+  }
 }
 
 .title-h3 {
@@ -85,6 +90,13 @@ svg {
   font-size: $fs-h3;
   line-height: 1.4;
   color: $c-black;
+}
+
+.title-h5 {
+  font-family: $ff-inter;
+  font-weight: 500;
+  font-size: $fs-h5;
+  line-height: 1.4;
 }
 
 .title-h6 {
@@ -103,6 +115,18 @@ svg {
   outline: none;
   cursor: pointer;
   position: relative;
+}
+
+.button-add {
+  width: 163px;
+  height: 40px;
+  background: $c-primary;
+  font-size: $fs-text;
+  color: $c-white;
+  border-radius: $radius-primary;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 ol, ul, li {

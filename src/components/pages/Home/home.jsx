@@ -8,6 +8,7 @@ import { Comment } from "./Comment/comment";
 let arr = Array(4).fill({ name: "Flower's Name", price: 0 });
 let bestSellers = arr.map((elem) => (
   <div className="col-3">
+
     <GoodsCard name={elem.name} price={elem.price} />
   </div>
 ));
