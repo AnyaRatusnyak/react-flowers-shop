@@ -9,8 +9,22 @@ import { Title } from "./Title/title";
 let arr = Array(4).fill({ name: "Flower's Name", price: 0 });
 let bestSellers = arr.map((elem) => (
   <div className="col-3">
-
     <GoodsCard name={elem.name} price={elem.price} />
+  </div>
+));
+
+let postsData = [
+  {
+    id: 1,
+    title: "Best flowers for inside home",
+    description:
+      "All the flowers are best for your lovly house just get the one you love the most 😊",
+  },
+];
+
+let latestPost = postsData.map((post) => (
+  <div className="col-4">
+    <Post key={post.id} title={post.title} description={post.description} />
   </div>
 ));
 
@@ -24,15 +38,9 @@ export const Home = () => {
       <Title name={"Latest posts"} />
 
       <div className="row">
-        <div className="col-4">
-          <Post />
-        </div>
-        <div className="col-4">
-          <Post />
-        </div>
-        <div className="col-4">
-          <Post />
-        </div>
+        {latestPost}
+        {latestPost}
+        {latestPost}
       </div>
       <Title name={"Comments"} />
 

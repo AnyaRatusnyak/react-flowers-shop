@@ -36,7 +36,7 @@
   font-size: 12px;
   color: #838383;
 }
-.post_footer button {
+.post_footer .wholePost {
   background-color: #ffffff;
   border: none;
   font-size: 18px;
@@ -45,17 +45,12 @@
   padding-right: 25px;
   padding-bottom: 15px;
 }
-.post_footer .icons {
-  word-spacing: 1em;
-  margin-top: 5px;
-  padding-left: 27px;
-}
-.icons .eye {
-  position: relative;
-  left: 15px;
-  bottom: 1px;
-}
-.icons .hurt {
-  position: relative;
-  bottom: 1px;
+.post_footer .hurt {
+  border: none;
+  background-color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  padding-left: 17px;
+  padding-right: 0;
+  margin-top: 12px;
 }

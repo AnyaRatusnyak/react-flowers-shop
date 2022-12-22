@@ -5,7 +5,9 @@ import ava from "../../../../assets/img/ava/Ava.png";
 import eye from "../../../../assets/svg/eye.svg";
 import hurt from "../../../../assets/svg/grey_heart.svg";
 
-export const Post = () => {
+export const Post = (props) => {
+  const handleClick = () => {};
+
   return (
     <div className="container post">
       <div className="row post_header">
@@ -18,19 +20,18 @@ export const Post = () => {
         <img src={postImg} alt="design" />
       </div>
       <div className="post_description">
-        <h6>Best flowers for inside home</h6>
-        <p>
-          All the flowers are best for your lovly house
-          <br /> just get the one you love the most 😊
-        </p>
+        <h6>{props.title}</h6>
+        <p>{props.description}</p>
         <div className="row post_footer">
           <div className="col-6 icons">
-            <img src={hurt} alt="hurt" className="hurt" />
+            <button className="hurt" onClick={handleClick}>
+              <img src={hurt} alt="hurt" />
+            </button>
             15
             <img src={eye} alt="eye" className="eye" /> 2001
           </div>
           <div className="col-6">
-            <button>Read more</button>
+            <button className="wholePost">Read more</button>
           </div>
         </div>
       </div>
