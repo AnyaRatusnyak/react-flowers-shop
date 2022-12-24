@@ -20,11 +20,28 @@ let postsData = [
     description:
       "All the flowers are best for your lovly house just get the one you love the most 😊",
   },
+  {
+    id: 2,
+    title: "Best flowers for inside home",
+    description:
+      "All the flowers are best for your lovly house just get the one you love the most 😊",
+  },
+  {
+    id: 3,
+    title: "Best flowers for inside home",
+    description:
+      "All the flowers are best for your lovly house just get the one you love the most 😊",
+  },
 ];
 
-let latestPost = postsData.map((post) => (
+let latestPost = postsData.map((post, pos) => (
   <div className="col-4">
-    <Post key={post.id} title={post.title} description={post.description} />
+    <Post
+      key={post.id}
+      title={post.title}
+      description={post.description}
+      pos={pos}
+    />
   </div>
 ));
 
@@ -37,11 +54,7 @@ export const Home = () => {
       <div className="row">{bestSellers}</div>
       <Title name={"Latest posts"} />
 
-      <div className="row">
-        {latestPost}
-        {latestPost}
-        {latestPost}
-      </div>
+      <div className="row">{latestPost}</div>
       <Title name={"Comments"} />
 
       <div className="row">

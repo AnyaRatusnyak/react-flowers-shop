@@ -18,11 +18,21 @@ export const Comment = () => {
             beutiful😍🌻... love’em so nuch..keep going 💯💯
           </p>
           <div className="comment_rating">
-            <img src={star} alt="star" />
-            <img src={star} alt="star" />
-            <img src={star} alt="star" />
-            <img src={star} alt="star" />
-            <img src={starGrey} alt="star" />
+            <button>
+              <img src={star} alt="star" />
+            </button>
+            <button>
+              <img src={star} alt="star" />
+            </button>
+            <button>
+              <img src={star} alt="star" />
+            </button>
+            <button>
+              <img src={star} alt="star" />
+            </button>
+            <button>
+              <img src={starGrey} alt="star" />
+            </button>
           </div>
         </div>
       </div>

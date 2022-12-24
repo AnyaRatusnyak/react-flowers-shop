@@ -5,8 +5,10 @@ import ava from "../../../../assets/img/ava/Ava.png";
 import eye from "../../../../assets/svg/eye.svg";
 import hurt from "../../../../assets/svg/grey_heart.svg";
 
-export const Post = (props) => {
-  const handleClick = () => {};
+export const Post = ({ title, description, pos }) => {
+  const handleClick = () => {
+    alert(pos);
+  };
 
   return (
     <div className="container post">
@@ -20,8 +22,8 @@ export const Post = (props) => {
         <img src={postImg} alt="design" />
       </div>
       <div className="post_description">
-        <h6>{props.title}</h6>
-        <p>{props.description}</p>
+        <h6>{title}</h6>
+        <p>{description}</p>
         <div className="row post_footer">
           <div className="col-6 icons">
             <button className="hurt" onClick={handleClick}>
