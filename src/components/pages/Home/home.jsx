@@ -8,7 +8,7 @@ import { Title } from "./Title/title";
 
 let arr = Array(4).fill({ name: "Flower's Name", price: 0 });
 let bestSellers = arr.map((elem) => (
-  <div className="col-3">
+  <div className="col-sm-3 text-center">
     <GoodsCard name={elem.name} price={elem.price} />
   </div>
 ));
@@ -35,7 +35,7 @@ let postsData = [
 ];
 
 let latestPost = postsData.map((post, pos) => (
-  <div className="col-4">
+  <div className="col-sm-4">
     <Post
       key={post.id}
       title={post.title}
@@ -58,13 +58,13 @@ export const Home = () => {
       <Title name={"Comments"} />
 
       <div className="row">
-        <div className="col-4">
+        <div className="col-sm-4">
           <Comment />
         </div>
-        <div className="col-4">
+        <div className="col-sm-4">
           <Comment />
         </div>
-        <div className="col-4">
+        <div className="col-sm-4">
           <Comment />
         </div>
       </div>
