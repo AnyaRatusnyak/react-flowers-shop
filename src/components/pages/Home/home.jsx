@@ -5,6 +5,12 @@ import { GoodsCard } from "../../ui/goods/goodsCard";
 import { MainTitle } from "./MainTitle/MainTitle";
 import { Comment } from "./Comment/comment";
 import { Title } from "./Title/title";
+import flowerOne from '../../../assets/img/main-title/One.png';
+import flowerTwo from '../../../assets/img/main-title/Two.png';
+import flowerThree from '../../../assets/img/main-title/Three.png';
+import flowerFour from '../../../assets/img/main-title/Four.png';
+import flowerFive from '../../../assets/img/main-title/Five.png';
+import flowerSix from '../../../assets/img/main-title/Six.png';
 
 let arr = Array(4).fill({ name: "Flower's Name", price: 0 });
 let bestSellers = arr.map((elem) => (
@@ -13,12 +19,21 @@ let bestSellers = arr.map((elem) => (
   </div>
 ));
 
+const flowers = [
+    {flower: flowerOne, desc: 'flowerOne'},
+    {flower: flowerTwo, desc: 'flowerTwo'},
+    {flower: flowerThree, desc: 'flowerThree'},
+    {flower: flowerFour, desc: 'flowerFour'},
+    {flower: flowerFive, desc: 'flowerFive'},
+    {flower: flowerSix, desc: 'flowerSix'}
+]
+
 let postsData = [
   {
     id: 1,
     title: "Best flowers for inside home",
     description:
-      "All the flowers are best for your lovly house just get the one you love the most 😊",
+      "All the flowers are best for your lovely house just get the one you love the most 😊",
   },
   {
     id: 2,
@@ -48,8 +63,8 @@ let latestPost = postsData.map((post, pos) => (
 export const Home = () => {
   return (
     <div className="container">
-      <MainTitle />
-      <Title name={"Best selers"} />
+      <MainTitle flowers={flowers}/>
+      <Title name={"Best sellers"} />
 
       <div className="row">{bestSellers}</div>
       <Title name={"Latest posts"} />
